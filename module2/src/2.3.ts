@@ -9,7 +9,11 @@
     const boolArray:GenericArray<boolean>=[true, false, true];
 
 // Generic for object
-    const user:GenericArray<{name:string;age:number}>=[
+interface User{
+    name:string
+    age:number
+}
+    const user:GenericArray<User>=[
         {
             name:'Mezba',
             age:100
