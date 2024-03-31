@@ -1,5 +1,5 @@
 {
-// 
+// Generic with interface
 interface Developer<T,X=null>{
     name:string;
     computer:{
@@ -17,7 +17,7 @@ const poorDeveloper:Developer<EmilabWatch>={
         model:'X255UR',
         releaseYear:2013
     },
-    smartWatch:{
+    smartWatch:{ 
         brand:'Emilab',
         model:'kw66',
         display:'OLED',
@@ -56,7 +56,7 @@ const richDeveloper:Developer<AppleWatch,Yahama>={
     },
     bike:{
         model: 'Yahama',
-        engineCapicity:'100cc'
+        engineCapacity:'100cc'
     }
 }
 
