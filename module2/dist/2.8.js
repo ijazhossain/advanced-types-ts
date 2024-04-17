@@ -9,10 +9,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 {
-    // Asynchronous TypeScript
+    const getToDo = () => __awaiter(void 0, void 0, void 0, function* () {
+        const response = yield fetch('https://jsonplaceholder.typicode.com/todos/1');
+        const data = yield response.json();
+        console.log(data);
+        return data;
+    });
+    getToDo();
     const createPromise = () => {
         return new Promise((resolve, reject) => {
-            const data = "something";
+            const data = { something: 'something' };
             if (data) {
                 resolve(data);
             }
