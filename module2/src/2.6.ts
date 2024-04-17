@@ -23,8 +23,8 @@ const addCourseToStudent=<T extends  {id: number, name: string, email: string}>(
         {
             id:333,
             name:'Mr.Y ', 
-        email:'y@gmail.com', 
-        hasWatch:'Apple Watch'}
+            email:'y@gmail.com', 
+            hasWatch:'Apple Watch'}
         );
     const student3 = addCourseToStudent({id: 444, name: 'Mr z', email: 'z@gmail.com',emni:'emni'})    
  
