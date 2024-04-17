@@ -1,63 +1,60 @@
 {
 // Generic with interface
-interface Developer<T,X=null>{
-    name:string;
+interface Developer<T,X=null >{
+    name: string;
     computer:{
         brand:string;
         model:string;
-        releaseYear: number
+        releaseYear:number;
     }
-    smartWatch: T;
+    smartWatch:T;
     bike?:X;
 }
+type EmilabWatch={
+    brand:string,
+    model:string,
+    display:string,
+}
 const poorDeveloper:Developer<EmilabWatch>={
-    name:'Persian',
+    name:'persian',
     computer:{
         brand:'ASUS',
-        model:'X255UR',
-        releaseYear:2013
+        model:'K42F',
+        releaseYear: 2011,
     },
-    smartWatch:{ 
+    smartWatch :{
         brand:'Emilab',
         model:'kw66',
-        display:'OLED',
+        display:'OLED'
     }
-}
-type EmilabWatch={
-    brand:string;
-    model:string;
-    display:string;
-        
 }
 interface AppleWatch{
     brand:string;
     model:string;
-    display:string;
     heartTrack:boolean;
     sleepTrack:boolean;
 }
-type Yahama={
+type Bike={
     model:string;
-    engineCapacity:string;
+    speed:string;
+
 }
-const richDeveloper:Developer<AppleWatch,Yahama>={
-    name:'Rich Dev',
+const richDeveloper:Developer<AppleWatch,Bike>={
+    name:'Mahbub',
     computer:{
-        brand:'HP',
-        model:'X255UR',
-        releaseYear:2013
+        brand:'ASUS',
+        model:'K42F',
+        releaseYear: 2011,
     },
-    smartWatch:{
-        brand:'Apple',
-        model:'kw6633',
-        display:'OLED',
+    smartWatch :{
+        brand:'Emilab',
+        model:'kw66',
         heartTrack:true,
-        sleepTrack:true,
+        sleepTrack:true
     },
     bike:{
-        model: 'Yahama',
-        engineCapacity:'100cc'
+        model:'Yahama',
+        speed: '1000cc',
     }
 }
-
 }

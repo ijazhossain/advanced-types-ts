@@ -1,6 +1,6 @@
 {
     //interface
-type User1={
+/* type User1={
     name:string;
     age:number
 }
@@ -28,5 +28,37 @@ type Add1 =(num1:number,num2:number)=>number
 interface Add2{
     (num1:number, num2:number):number
 }
-const add:Add2 =(num1,num2)=>num1 + num2
+const add:Add2 =(num1,num2)=>num1 + num2 */
+
+// INTERFACE
+type User1={
+    name:string;
+    age:number;
+}
+interface User2{
+    name:string;
+    age:number;
+}
+const user1: UserWithRole2={
+    name:'Persian',
+    age:100,
+    role: 'student'
+}
+
+type UserWithRole1 =User1 & {role: string}
+interface UserWithRole2 extends User2{
+    role: string;
+}
+// JS Object, array --> object function -> object
+type Roll1 = number[];
+const rollNumber1 : Roll2=[1,2,3]
+interface Roll2{
+[index: number]: number
+}
+
+type Add1=(number1:number, number2:number)=>number;
+interface Add2 {
+    (number1: number, number2: number):number
+}
+const add:Add2   =(number1,number2)=>number1+number2
 }
